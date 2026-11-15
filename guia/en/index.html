@@ -170,13 +170,13 @@
 <div>
 <span class="chip">Buying guide · AI robots</span>
 <h1>You want a robot that <span class="amb">talks</span> with people. See which kit to buy.</h1>
-<p class="lead">It listens, responds by voice using an AI like DeepSeek, sees with the camera, and moves around the room. Before you spend money, find out which kit can really do this and which only looks like it can.</p>
+<p class="lead">It listens, responds aloud using an AI such as DeepSeek, looks through the camera, and moves around the room. Before you spend anything, the guide <strong>Talking Robot</strong> shows which kit actually does this and which one only looks like it does.</p>
 <div class="cta">
-<a class="btn" href="#video">Understanding it in a few minutes</a>
+<a class="btn" href="#escolha">See which one to buy</a>
 <a class="btn ghost" href="#comparar">View the tables</a>
 </div>
 </div>
-<figure><img alt="Your talking robot: camera, microphone, voice, wheels, and DeepSeek-style AI—which kit to buy" src="../assets/banner-en.jpg"/></figure>
+<figure><img alt="Your talking robot: camera, microphone, voice, wheels, and DeepSeek-style AI—which kit to buy" src="../assets/banner-en.jpg"/><figcaption style="padding:8px 12px;font-size:.78rem;color:var(--mut);background:var(--card)">Illustration. Actual photos of the kits are in “The kits.”</figcaption></figure>
 </div>
 </header>
 <section class="resumo" id="resumo"><div class="wrap">
@@ -207,9 +207,21 @@
 </div>
 <div class="grid g3" style="margin-top:26px">
 <div class="card"><h3>📶 No internet, no conversation</h3><p>If the Wi-Fi goes down, it stops responding. Away from home (at an event or store), use your phone’s hotspot. The exception is running the AI on your own computer on the same network.</p></div>
-<div class="card"><h3>💳 AI charges per use</h3><p>DeepSeek, GPT, and others charge per conversation (it’s cheap, but the bill and API key are yours). Some kits use a free manufacturer server with usage limits.</p></div>
+<div class="card"><h3>💳 AI charges per use</h3><p>DeepSeek, GPT, and others charge by usage (it’s inexpensive, but the account and access key are yours). XiaoZhi kits use the XiaoZhi project’s server by default instead of your key.</p></div>
 <div class="card"><h3>🇧🇷 Portuguese</h3><p>Several inexpensive kits use the XiaoZhi system, made for Chinese speakers. The AI responds well in Portuguese, but the voice recognition and the robot's voice need to be tested.</p></div>
 </div>
+<details class="card" style="margin-top:16px"><summary style="cursor:pointer;font-family:Sora;font-weight:700">📖 Words on this page</summary>
+<ul style="color:var(--mut);font-size:.92rem;margin:.8em 0 0;padding-left:18px">
+<li><b>ESP32-S3</b>: a small, inexpensive chip with Wi-Fi, the “brain” of the boards and StackChan.</li>
+<li><b>Raspberry Pi</b>: a computer the size of a card that runs Linux. It’s the brain of the PiCar-X and TurboPi.</li>
+<li><b>XiaoZhi</b>: a free, open-source program that turns an ESP32 board into a voice assistant connected to an AI on the internet.</li>
+<li><b>Flash the program (firmware)</b>: copy the program the board will run over the USB cable.</li>
+<li><b>Wake word</b>: the phrase that wakes the robot so it can listen ("hey robot").</li>
+<li><b>18650</b>: a large rechargeable battery (like the one in a powerful flashlight). <b>mAh</b>: how much charge the battery holds; more means it stays on longer.</li>
+<li><b>MP</b>: megapixels, the camera’s resolution. <b>AMOLED</b>: a type of screen with vivid colors and true black. <b>microSD</b>: memory card.</li>
+<li><b>Terminal</b>: the window where you type commands. <b>Repository</b>: the project folder stored on GitHub.</li>
+</ul>
+</details>
 </div></section>
 <section id="grupos"><div class="wrap">
 <span class="chip">The kits</span>
@@ -286,19 +298,19 @@
 <p>Development board with a nice AMOLED display. To chat with AI, you flash XiaoZhi onto it.</p>
 <ul><li>2.16" 480×480 AMOLED, touchscreen</li><li>2 microphones, motion sensor, clock</li><li>1000 mAh battery in the version with a battery</li></ul>
 <p class="bom">👍 The most beautiful, sharpest screen of the 9.</p>
-<p class="ruim">👎 No camera. You need to connect a speaker and record the program.</p>
+<p class="ruim">👎 No camera. It has an audio chip, but the specs don’t confirm a speaker: check the listing or connect one. You also need to flash the program.</p>
 <a class="lk" href="https://pt.aliexpress.com/item/1005012821178507.html" rel="noopener" target="_blank">View on AliExpress ↗</a>
 </div>
 </article>
 <article class="prod">
-<div class="ph vazio">📦</div>
+<div class="ph"><img alt="Espressif ESP32-S3-BOX-3 in the base" loading="lazy" src="../assets/produtos/box3.jpg"/></div>
 <div class="bd">
 <span class="badge">Official alternative</span>
 <h4>Espressif ESP32-S3-BOX-3</h4>
 <div class="preco">about US$ 45 to 60</div>
 <p>A little box from the manufacturer of the ESP32 chip itself. It runs XiaoZhi and is officially supported by Home Assistant (home automation).</p>
 <ul><li>2.4" touchscreen</li><li>2 microphones and speaker</li><li>Wake word recognized on the device itself</li></ul>
-<p class="bom">👍 Well documented, widely used.</p>
+<p class="bom">👍 Official board from the chip manufacturer; rated 8.4 out of 10 in 3 reviews compiled by a review site.</p>
 <p class="ruim">👎 No camera, doesn’t move.</p>
 <a class="lk" href="https://www.espressif.com/en/news/ESP32-S3-BOX-3" rel="noopener" target="_blank">View the product ↗</a>
 </div>
@@ -316,7 +328,7 @@
 <h4>SunFounder PiCar-X (AI version)</h4>
 <div class="preco">US$ 89,99 + Raspberry Pi</div>
 <p>A car for Raspberry Pi (the little computer, sold separately). The manufacturer provides ready-made lessons on voice conversations with AI, and the code supports DeepSeek.</p>
-<ul><li>Camera that pans and tilts</li><li>Distance (ultrasonic) and line sensors</li><li>Microphone and speaker used in the voice lessons</li><li>AI: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao, and Ollama (AI on your computer)</li></ul>
+<ul><li>Camera that pans and tilts</li><li>Distance (ultrasonic) and line sensors</li><li>Raspberry Pi 5, 4, 3B+, or Zero 2W (the Zero 2W only has 2.4 GHz Wi-Fi)</li><li>Microphone and speaker used in the voice lessons</li><li>AI: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao, and Ollama (AI on your computer)</li></ul>
 <p class="bom">👍 Programmable in Python, runs AI locally, Portuguese voice is possible.</p>
 <p class="ruim">👎 You need to assemble it and buy the Raspberry Pi. Check the listing to make sure it’s the AI version.</p>
 <a class="lk" href="https://www.sunfounder.com/products/picar-x" rel="noopener" target="_blank">View in the official store ↗</a>
@@ -366,7 +378,7 @@
 <tr><td><b>1.54" board</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td>1,54"</td><td>depends</td><td class="s">✅</td></tr>
 <tr><td><b>Waveshare AMOLED 2,16"</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td>connect speaker</td><td>2.16" AMOLED</td><td>1000 mAh</td><td>upload program</td></tr>
 <tr><td><b>ESP32-S3-BOX-3</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td>2,4"</td><td>❌</td><td class="s">✅</td></tr>
-<tr><td><b>PiCar-X</b></td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>❌</td><td>2 × 18650</td><td>+ Raspberry Pi</td></tr>
+<tr><td><b>PiCar-X</b></td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>❌</td><td>2 18650 batteries (check whether they’re included)</td><td>+ Raspberry Pi</td></tr>
 <tr><td><b>miniAuto Pro</b> (Standard/Ultimate)</td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>2,0"</td><td>2000 mAh</td><td class="s">✅</td></tr>
 <tr><td><b>TurboPi + Pi 5</b></td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>❌</td><td>included</td><td class="s">✅</td></tr>
 </tbody>
@@ -375,11 +387,11 @@
 <caption>2. AI, Wi-Fi, and brain</caption>
 <thead><tr><th>Kit</th><th>Brain</th><th>Wi-Fi</th><th>AI</th><th>Can it use DeepSeek?</th></tr></thead>
 <tbody>
-<tr><td><b>StackChan kit / Core</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>Factory-installed XiaoZhi</td><td>Through the XiaoZhi server; not confirmed with your own server</td></tr>
-<tr><td><b>1.54" board</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi</td><td>Yes, through the XiaoZhi dashboard</td></tr>
-<tr><td><b>Waveshare AMOLED 2,16"</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi (record)</td><td>Yes, through XiaoZhi</td></tr>
-<tr><td><b>ESP32-S3-BOX-3</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi or Home Assistant</td><td>Yes, through XiaoZhi</td></tr>
-<tr><td><b>PiCar-X</b></td><td>Raspberry Pi 4/5</td><td>2.4 and 5 GHz</td><td>Manufacturer's code: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao, Ollama</td><td>Yes, by changing one line in the example (your key)</td></tr>
+<tr><td><b>StackChan kit / Core</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>Factory-installed XiaoZhi</td><td>XiaoZhi listings mention DeepSeek; not confirmed for this kit</td></tr>
+<tr><td><b>1.54" board</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi</td><td>According to the listings, yes (not tested)</td></tr>
+<tr><td><b>Waveshare AMOLED 2,16"</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi (record)</td><td>According to XiaoZhi listings, yes (not tested)</td></tr>
+<tr><td><b>ESP32-S3-BOX-3</b></td><td>ESP32-S3</td><td>2.4 GHz</td><td>XiaoZhi or Home Assistant</td><td>According to XiaoZhi listings, yes (not tested)</td></tr>
+<tr><td><b>PiCar-X</b></td><td>Raspberry Pi 4/5</td><td>2.4 and 5 GHz</td><td>Manufacturer's code: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao, Ollama</td><td>Yes: the manufacturer documents it; you switch the AI in the example code (step 4) and use your own key</td></tr>
 <tr><td><b>miniAuto Pro</b></td><td>ESP32 + WonderLLM module (ESP32-P4 + C5)</td><td>2.4 and 5 GHz</td><td>Voice and vision on the module + configured online model</td><td>Online model “with configuration”; DeepSeek not confirmed</td></tr>
 <tr><td><b>TurboPi + Pi 5</b></td><td>Raspberry Pi 5 (8 GB)</td><td>2.4 and 5 GHz</td><td>ChatGPT (voice and vision)</td><td>Not out of the box; Raspberry Pi lets you change it in the code</td></tr>
 </tbody>
@@ -441,10 +453,10 @@
 <section id="guia"><div class="wrap">
 <span class="chip">User guide · step by step</span>
 <h2>Filter the kits and set up the conversation</h2>
-<p class="sub">You only need Python 3 (included with Linux and Mac; on Windows, install it from python.org).</p>
+<p class="sub">Requires Python 3 (already included on Linux and Mac; on Windows, install it from python.org). Enter the commands in the terminal (on Windows, use “Command Prompt” or PowerShell).</p>
 <div class="step"><div class="b">1</div><div>
 <h3>Get the kit</h3>
-<p>Copy the repository to your computer.</p>
+<p>Copy the repository to your computer using Git. Without Git: on the <a href="https://github.com/inematds/robo-que-conversa" rel="noopener" target="_blank">repository</a>, green button <b>Code → Download ZIP</b>, extract it and open the terminal inside the folder.</p>
 <pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/robo-que-conversa.git</span>
 <span class="k">cd</span> robo-que-conversa</pre>
 </div></div>
@@ -462,10 +474,10 @@
 </div></div>
 <div class="step"><div class="b">4</div><div>
 <h3>PiCar-X chatting with DeepSeek (script, not tested yet)</h3>
-<p>Follow SunFounder’s documentation (lessons 18 and 21). After assembling the car and installing the manufacturer’s modules on the Raspberry Pi, create a key on the DeepSeek platform and save it in the secrets file.</p>
+<p>Follow SunFounder’s documentation (lessons 18 and 21). First, assemble the car and <a href="https://docs.sunfounder.com/projects/picar-x-v20/en/latest/python/install_all_modules.html" rel="noopener" target="_blank">install the manufacturer’s modules</a> on the Raspberry Pi (page in English). Then create the key at <a href="https://platform.deepseek.com/" rel="noopener" target="_blank">platform.deepseek.com</a> (API Keys menu, with credit in the account) and save it in the secrets file.</p>
 <pre><span class="k">cd</span> ~/picar-x/example
 <span class="k">sudo nano</span> secret.py          <span class="c"># write: DEEPSEEK_API_KEY = "sk-..."</span></pre>
-<p>In the voice assistant example (<code>21.voice_active_car_gpt.py</code>), switch the AI and the language. The names come from SunFounder’s documentation; choose a Portuguese voice model for Piper from Piper’s voice list.</p>
+<p>In the voice assistant example (<code>21.voice_active_car_gpt.py</code>), switch the AI and language. The names come from SunFounder’s documentation. You can choose the Piper voice in Portuguese from the <a href="https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR" rel="noopener" target="_blank">Piper’s list of pt_BR voices</a> and write its name in place of the placeholder.</p>
 <pre><span class="k">from</span> picarx.llm <span class="k">import</span> Deepseek <span class="k">as</span> LLM
 llm = LLM(api_key=DEEPSEEK_API_KEY, model=<span class="s">"deepseek-chat"</span>)
 STT_LANGUAGE = <span class="s">"pt"</span>            <span class="c"># Vosk has a Portuguese model</span>
