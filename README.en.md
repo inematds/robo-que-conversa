@@ -12,6 +12,8 @@ This guide is a **buying guide** for anyone who wants a robot that talks with pe
 
 Complete guide (groups, tables, prices, and which one to buy): **https://inematds.github.io/robo-que-conversa/guia/en/**
 
+🎬 Video: https://www.youtube.com/watch?v=hGNsx_B-JKA · Short: https://youtube.com/shorts/gg5jEXzIjes
+
 ## What’s included
 
 | File | What it’s for |

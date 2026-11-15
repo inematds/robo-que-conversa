@@ -12,6 +12,8 @@ Este guia é uma **pesquisa de compra** para quem quer um robô que conversa com
 
 Guia completo (grupos, tabelas, preços e qual comprar): **https://inematds.github.io/robo-que-conversa/guia/**
 
+🎬 Vídeo: https://www.youtube.com/watch?v=hGNsx_B-JKA · Short: https://youtube.com/shorts/gg5jEXzIjes
+
 ## O que tem aqui
 
 | Arquivo | Para quê |
