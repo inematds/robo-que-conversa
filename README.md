@@ -1,8 +1,8 @@
 # robo-que-conversa — qual kit comprar para ter um robô com IA que conversa com as pessoas
 
-[![Seu robô que conversa](guia/assets/banner.jpg)](https://inematds.github.io/robo-que-conversa/guia/)
-
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
+[![Seu robô que conversa](guia/assets/banner.jpg)](https://inematds.github.io/robo-que-conversa/guia/)
 
 ## O que é
 
