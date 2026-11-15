@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robô que conversa — qual kit comprar para ter um robô com IA que fala com as pessoas</title>
+<meta name="description" content="Você quer um robô que conversa com as pessoas usando IA como a DeepSeek. Compare 9 kits em 3 grupos (robô de mesa, placas com tela e robôs com rodas, câmera, microfone e voz), com preços em dólar e tabelas.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/robo-que-conversa/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/robo-que-conversa/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/robo-que-conversa/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    --ok:#4ade80; --no:#f87171;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    --ok:#15803d; --no:#b91c1c;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  body.light nav{background:rgba(246,247,249,.85)}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb);white-space:nowrap}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:.9rem}
+  nav .links a.sec{color:var(--mut);white-space:nowrap} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:1180px){nav .links a.sec.opt{display:none}}
+  @media(max-width:860px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.15rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:40ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.1rem;line-height:1.7;max-width:76ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:66ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  /* produtos */
+  .grupo{margin-top:44px}
+  .grupo:first-of-type{margin-top:0}
+  .grupo .gh{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+  .grupo .gh h3{font-size:1.4rem}
+  .grupo .gh .tag{font-family:Sora;font-weight:800;color:#1a1206;background:var(--amb);border-radius:8px;padding:.1em .55em;font-size:.95rem}
+  .grupo>p{color:var(--mut);margin:.2em 0 18px;max-width:70ch}
+  .prod{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+  .prod .ph{background:#fff;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .prod .ph img{width:100%;height:100%;object-fit:contain;display:block}
+  .prod .ph.vazio{background:var(--bg2);color:var(--mut);font-size:2.6rem}
+  .prod .bd{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .prod h4{font-family:Sora;font-size:1rem;margin:0;line-height:1.25}
+  .prod .preco{font-family:Sora;font-weight:800;color:var(--amb);font-size:1.02rem}
+  .prod p{color:var(--mut);font-size:.9rem;margin:0}
+  .prod ul{margin:0;padding-left:18px;color:var(--mut);font-size:.86rem}
+  .prod .bom{color:var(--txt);font-size:.86rem}
+  .prod .ruim{color:var(--mut);font-size:.86rem}
+  .prod .lk{margin-top:auto;font-size:.86rem;font-family:Sora;font-weight:600}
+  .badge{display:inline-block;font-size:.7rem;font-family:Sora;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:.15em .5em;background:rgba(226,162,59,.14);color:var(--amb)}
+  .badge.gr{background:rgba(74,222,128,.13);color:var(--ok)}
+  .badge.rd{background:rgba(248,113,113,.13);color:var(--no)}
+  /* tabelas */
+  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:26px}
+  table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:760px}
+  th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{font-family:Sora;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--amb);background:var(--bg2);white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.s{color:var(--ok);font-weight:700} td.n{color:var(--no);font-weight:700}
+  td b{font-family:Sora}
+  .tbl caption{caption-side:top;text-align:left;padding:12px 14px 4px;font-family:Sora;font-weight:700}
+  /* barras de preço */
+  .bars{display:flex;flex-direction:column;gap:9px}
+  .bar{display:grid;grid-template-columns:minmax(120px,230px) 1fr 70px;gap:12px;align-items:center;font-size:.88rem}
+  .bar .t{height:16px;border-radius:6px;background:var(--bg2);overflow:hidden}
+  .bar .t i{display:block;height:100%;background:linear-gradient(90deg,var(--amb),var(--amb2));border-radius:6px}
+  .bar .t i.rodas{background:linear-gradient(90deg,#38bdf8,#7dd3fc)}
+  .bar .v{font-family:Sora;font-weight:700;text-align:right}
+  @media(max-width:560px){.bar{grid-template-columns:1fr 64px}.bar .t{grid-column:1/3;grid-row:2}}
+  .leg{display:flex;gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--mut);margin:0 0 14px}
+  .leg i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+  .aviso{border-left:3px solid var(--amb);background:var(--bg2);border-radius:0 12px 12px 0;padding:14px 18px;color:var(--txt);font-size:.95rem;margin:18px 0}
+  .esc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .esc .card b{display:block;font-family:Sora;color:var(--amb);margin-bottom:.3em}
+  .techhead{background:var(--bg2);border-top:3px solid var(--amb);padding:58px 0 8px}
+  .techhead h2{font-family:Sora;margin:.3em 0 0;font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .techhead .sub{color:var(--mut);margin:.6em 0 1em;max-width:66ch}
+  .techzone{background:var(--bg2)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🤖</span> robo-que-conversa</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#video">Vídeo</a>
+    <a class="sec" href="#grupos">Os kits</a>
+    <a class="sec" href="#comparar">Comparar</a>
+    <a class="sec opt" href="#escolha">Qual comprar</a>
+    <a class="sec opt" href="#cuidados">Cuidados</a>
+    <a class="sec" href="#tecnico">Kit (técnico)</a>
+    <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+    <a class="btn" href="https://github.com/inematds/robo-que-conversa" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Pesquisa de compra · robôs com IA</span>
+      <h1>Você quer um robô que <span class="amb">conversa</span> com as pessoas. Veja qual kit comprar.</h1>
+      <p class="lead">Ele ouve, responde com voz usando uma IA como a DeepSeek, olha com a câmera e anda pela sala. Antes de gastar, saiba qual kit faz isso de verdade e qual só parece fazer.</p>
+      <div class="cta">
+        <a class="btn" href="#video">Entender em poucos minutos</a>
+        <a class="btn ghost" href="#comparar">Ver as tabelas</a>
+      </div>
+    </div>
+    <figure><img src="assets/banner.jpg" alt="Seu robô que conversa: câmera, microfone, voz, rodas e IA tipo DeepSeek, qual kit comprar"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">Em resumo</span>
+  <p>Este guia é uma <strong>pesquisa de compra</strong> para quem quer um robô que conversa com as pessoas usando inteligência artificial (IA). Ele compara 9 kits em três grupos: robôs de mesa que mexem a cabeça, placas com tela para montar um assistente de voz, e robôs com rodas, câmera, microfone e alto-falante. Para cada um você vê o preço em dólar, o que vem na caixa, se funciona sozinho e qual IA ele usa. Os dados são de 14/11/2026: <strong>nada foi comprado nem testado ainda</strong>, e os preços mudam. É só ler; quem quiser tem um pequeno programa que filtra os kits pelo que você precisa.</p>
+  <figure style="margin:26px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Três grupos de kits com IA que ouvem, falam e veem: robô de mesa, placas com tela, robôs com rodas, câmera e sensores, voz com DeepSeek, qual comprar" loading="lazy" style="width:100%;display:block"></figure>
+</div></section>
+
+<section id="video"><div class="wrap">
+  <span class="chip">Vídeo</span>
+  <h2>Entenda em poucos minutos</h2>
+  <p class="sub">Qual robô ouve, fala, vê e anda, quanto custa e qual comprar para o que você quer fazer.</p>
+  <!-- VIDEO: entra o explicavideo do projeto quando publicado -->
+  <p class="mut">O vídeo explicativo deste guia está em produção e entra aqui assim que for publicado.</p>
+  <!-- VERSOES -->
+</div></section>
+
+<section id="caminho"><div class="wrap">
+  <span class="chip">Como a conversa funciona</span>
+  <h2>A IA <span class="amb">não mora</span> dentro do robô</h2>
+  <p class="sub">Todos os kits deste guia funcionam do mesmo jeito: o robô ouve e fala, mas quem pensa é um computador na internet. Por isso todos precisam de Wi-Fi.</p>
+  <div class="flow">
+    <span>🗣️ Pessoa fala</span><span class="arr">→</span>
+    <span>🎙️ Microfone do robô</span><span class="arr">→</span>
+    <span>📶 Wi-Fi</span><span class="arr">→</span>
+    <span>📝 Voz vira texto</span><span class="arr">→</span>
+    <span>🧠 IA responde (DeepSeek, GPT, Qwen…)</span><span class="arr">→</span>
+    <span>🔊 Texto vira voz</span><span class="arr">→</span>
+    <span>🤖 Robô fala e se mexe</span>
+  </div>
+  <div class="grid g3" style="margin-top:26px">
+    <div class="card"><h3>📶 Sem internet, sem conversa</h3><p>Se o Wi-Fi cair, ele para de responder. Fora de casa (evento, loja), use o roteador do celular. A exceção é rodar a IA num computador seu na mesma rede.</p></div>
+    <div class="card"><h3>💳 A IA cobra por uso</h3><p>DeepSeek, GPT e outras cobram por conversa (é barato, mas a conta e a chave são suas). Alguns kits usam um servidor gratuito do fabricante, com limite de uso.</p></div>
+    <div class="card"><h3>🇧🇷 Português</h3><p>Vários kits baratos usam o sistema XiaoZhi, feito para o chinês. A IA responde bem em português, mas o reconhecimento da sua voz e a voz do robô precisam ser testados.</p></div>
+  </div>
+</div></section>
+
+<section id="grupos"><div class="wrap">
+  <span class="chip">Os kits</span>
+  <h2>Três grupos, <span class="amb">nove kits</span></h2>
+  <p class="sub">Separados pelo que fazem: ficar na mesa mexendo a cabeça, ser uma tela que conversa, ou andar pela sala vendo e ouvindo. Preços aproximados em dólar; no Brasil, some frete e impostos de importação.</p>
+
+  <div class="grupo">
+    <div class="gh"><span class="tag">A</span><h3>Robô de mesa: fica parado e mexe a cabeça</h3></div>
+    <p>Um "bichinho" com carinha na tela, que vira para quem fala. Bom para recepção, mesa de trabalho e demonstração.</p>
+    <div class="grid g3">
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/stackchan-kit.jpg" alt="M5Stack StackChan kit completo" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge gr">Funciona sozinho</span>
+          <h4>M5Stack StackChan (kit completo)</h4>
+          <div class="preco">cerca de US$ 99</div>
+          <p>Cabeça (Core) e corpo (Body) montados. Já vem com o agente de IA XiaoZhi de fábrica; você escolhe o agente pelo app StackChan World.</p>
+          <ul><li>Tela 2,0" com carinha animada</li><li>Câmera, 2 microfones, alto-falante 1 W</li><li>2 motores: gira 360° e inclina 90°</li><li>Bateria 550 mAh, Wi-Fi 2,4 GHz</li></ul>
+          <p class="bom">👍 Olha para a pessoa e faz expressões.</p>
+          <p class="ruim">👎 Não anda. Não confirmei se dá para trocar a IA pela DeepSeek sua.</p>
+          <a class="lk" href="https://docs.m5stack.com/en/products/sku/K151" target="_blank" rel="noopener">Ver o produto ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/stackchan-core.jpg" alt="StackChan Core, a cabeça do robô" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge">Só a cabeça</span>
+          <h4>StackChan Core</h4>
+          <div class="preco">≈ US$ 46 (R$ 281,62 no AliExpress)</div>
+          <p>O "cérebro" do StackChan, vendido separado. Funciona como placa com tela, mas sem o corpo não se mexe.</p>
+          <ul><li>ESP32-S3, tela 2,0" 320×240 touch</li><li>Câmera 0,3 MP, sensor de proximidade</li><li>2 microfones, alto-falante 1 W, microSD</li></ul>
+          <p class="bom">👍 Tem tudo para conversar e ver.</p>
+          <p class="ruim">👎 Sem bateria e sem motores.</p>
+          <a class="lk" href="https://pt.aliexpress.com/item/1005012587645804.html" target="_blank" rel="noopener">Ver no AliExpress ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/stackchan-body.jpg" alt="StackChan Body, o corpo do robô" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge rd">Não funciona sozinho</span>
+          <h4>StackChan Body</h4>
+          <div class="preco">≈ US$ 56 (R$ 344,65 no AliExpress)</div>
+          <p>Só o corpo: motores, bateria e sensores. Precisa do Core original; o app não aceita outras cabeças da marca.</p>
+          <ul><li>2 motores com retorno de posição</li><li>Bateria 550 mAh, 12 LEDs coloridos</li><li>Infravermelho, toque em 3 áreas, NFC</li></ul>
+          <p class="bom">👍 Completa o Core.</p>
+          <p class="ruim">👎 Core + Body separados = R$ 626,27. Compare com o kit completo antes.</p>
+          <a class="lk" href="https://pt.aliexpress.com/item/1005012588163007.html" target="_blank" rel="noopener">Ver no AliExpress ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="grupo">
+    <div class="gh"><span class="tag">B</span><h3>Placas com tela: o assistente de voz que você monta</h3></div>
+    <p>Não andam nem mexem. São a forma mais barata de testar a conversa por voz com IA antes de comprar um robô.</p>
+    <div class="grid g3">
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/esp32-154.jpg" alt="Placa ESP32-S3 com tela de 1,54 polegada" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge gr">Mais barato</span>
+          <h4>Placa ESP32-S3 LCD 1,54" "IA DeepSeek"</h4>
+          <div class="preco">≈ US$ 19 a 22 (R$ 118,54 a R$ 135,71)</div>
+          <p>Cubo pequeno com tela, vendido para conversar com IA pelo sistema XiaoZhi. O anúncio tem 4 versões.</p>
+          <ul><li>Tela 240×240</li><li>Microfones e alto-falante (em placas parecidas: 2 microfones e microSD)</li><li>Wi-Fi 2,4 GHz</li></ul>
+          <p class="bom">👍 Testa a conversa em português gastando pouco.</p>
+          <p class="ruim">👎 Marca genérica. Servidor padrão é chinês.</p>
+          <a class="lk" href="https://pt.aliexpress.com/item/1005011874532154.html" target="_blank" rel="noopener">Ver no AliExpress ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/waveshare-amoled.jpg" alt="Waveshare ESP32-S3 com tela AMOLED de 2,16 polegadas" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge">Melhor tela</span>
+          <h4>Waveshare ESP32-S3 Touch AMOLED 2,16"</h4>
+          <div class="preco">≈ US$ 40 (R$ 243,61 no AliExpress)</div>
+          <p>Placa de desenvolvimento com uma tela AMOLED bonita. Para conversar com IA, você grava o XiaoZhi nela.</p>
+          <ul><li>AMOLED 2,16" 480×480, toque</li><li>2 microfones, sensor de movimento, relógio</li><li>Bateria 1000 mAh na versão com bateria</li></ul>
+          <p class="bom">👍 A tela mais bonita e nítida dos 9.</p>
+          <p class="ruim">👎 Sem câmera. Precisa ligar um alto-falante e gravar o programa.</p>
+          <a class="lk" href="https://pt.aliexpress.com/item/1005012821178507.html" target="_blank" rel="noopener">Ver no AliExpress ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph vazio">📦</div>
+        <div class="bd">
+          <span class="badge">Alternativa oficial</span>
+          <h4>Espressif ESP32-S3-BOX-3</h4>
+          <div class="preco">cerca de US$ 45 a 60</div>
+          <p>Caixinha da própria fabricante do chip ESP32. Roda o XiaoZhi e é oficialmente aceita pelo Home Assistant (automação da casa).</p>
+          <ul><li>Tela 2,4" touch</li><li>2 microfones e alto-falante</li><li>Palavra de ativação reconhecida no próprio aparelho</li></ul>
+          <p class="bom">👍 Bem documentada, muita gente usa.</p>
+          <p class="ruim">👎 Sem câmera, não se mexe.</p>
+          <a class="lk" href="https://www.espressif.com/en/news/ESP32-S3-BOX-3" target="_blank" rel="noopener">Ver o produto ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="grupo">
+    <div class="gh"><span class="tag">C</span><h3>Robôs com rodas: andam, veem, ouvem e falam</h3></div>
+    <p>O grupo que faz tudo: câmera, sensores de distância e de linha, microfone, alto-falante, Wi-Fi e conversa com IA.</p>
+    <div class="grid g3">
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/picarx.jpg" alt="SunFounder PiCar-X, carrinho com câmera" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge gr">Melhor custo</span>
+          <h4>SunFounder PiCar-X (versão AI)</h4>
+          <div class="preco">US$ 89,99 + Raspberry Pi</div>
+          <p>Carrinho para Raspberry Pi (o computadorzinho, vendido à parte). A fabricante traz aulas prontas de conversa por voz com IA e o código aceita DeepSeek.</p>
+          <ul><li>Câmera que gira e inclina</li><li>Sensor de distância (ultrassom) e de linha</li><li>Microfone e alto-falante usados nas aulas de voz</li><li>IA: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao e Ollama (IA no seu computador)</li></ul>
+          <p class="bom">👍 Programável em Python, roda IA local, voz em português possível.</p>
+          <p class="ruim">👎 Precisa montar e comprar o Raspberry Pi. Confira no anúncio se é a versão AI.</p>
+          <a class="lk" href="https://www.sunfounder.com/products/picar-x" target="_blank" rel="noopener">Ver na loja oficial ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/miniauto.jpg" alt="Hiwonder miniAuto Pro com rodas mecanum e braço" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge">Mais simples</span>
+          <h4>Hiwonder miniAuto Pro (Standard ou Ultimate)</h4>
+          <div class="preco">a partir de cerca de US$ 164</div>
+          <p>Carrinho com rodas que andam de lado e um módulo de IA (WonderLLM) com câmera, tela, microfones e alto-falante.</p>
+          <ul><li>Câmera 2 MP, tela 2,0" touch</li><li>Ouve a até 5 m em silêncio (1 m com barulho)</li><li>Ultrassom, sensor de linha, bateria 2000 mAh</li><li>Ultimate traz braço com garra</li></ul>
+          <p class="bom">👍 Tudo num módulo só, Wi-Fi 2,4 e 5 GHz.</p>
+          <p class="ruim">👎 A versão Starter NÃO tem câmera, microfone nem alto-falante. Preço por versão não confirmado.</p>
+          <a class="lk" href="https://rcdrone.top/products/miniauto-pro" target="_blank" rel="noopener">Ver no revendedor ↗</a>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><img src="assets/produtos/turbopi.jpg" alt="Hiwonder TurboPi com rodas mecanum e câmera" loading="lazy"></div>
+        <div class="bd">
+          <span class="badge">Completo</span>
+          <h4>Hiwonder TurboPi Advanced + Raspberry Pi 5</h4>
+          <div class="preco">US$ 459,99</div>
+          <p>Já vem com o Raspberry Pi 5 de 8 GB. Conversa por voz e entende a imagem da câmera com IA (ChatGPT).</p>
+          <ul><li>Câmera HD que gira e inclina</li><li>Rodas mecanum: anda para qualquer lado</li><li>Segue linha, reconhece cor e objeto</li></ul>
+          <p class="bom">👍 Chega completo, chassi de metal.</p>
+          <p class="ruim">👎 Caro. A IA de fábrica é o ChatGPT.</p>
+          <a class="lk" href="https://www.amazon.com/dp/B0FHHPZFVZ" target="_blank" rel="noopener">Ver na Amazon EUA ↗</a>
+        </div>
+      </article>
+    </div>
+    <p class="mut" style="margin-top:18px">Nível avançado (fora do foco): Hiwonder ROSOrin (cerca de US$ 374) e JetAuto Pro (cerca de US$ 1.500) têm LiDAR e câmera 3D para mapear a sala sozinhos. Preços só de resultado de busca.</p>
+  </div>
+</div></section>
+
+<section id="comparar"><div class="wrap">
+  <span class="chip">Comparar</span>
+  <h2>Tudo lado a lado</h2>
+  <p class="sub">Arraste a tabela para o lado no celular. ✅ = tem, ❌ = não tem.</p>
+
+  <div class="tbl"><table>
+    <caption>1. O que cada kit tem</caption>
+    <thead><tr><th>Kit</th><th>Grupo</th><th>Anda</th><th>Mexe</th><th>Câmera</th><th>Microfone</th><th>Voz</th><th>Tela</th><th>Bateria</th><th>Sozinho?</th></tr></thead>
+    <tbody>
+      <tr><td><b>StackChan kit</b></td><td>A</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>2,0"</td><td>550 mAh</td><td class="s">✅</td></tr>
+      <tr><td><b>StackChan Core</b></td><td>A</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>2,0"</td><td>❌</td><td>como placa</td></tr>
+      <tr><td><b>StackChan Body</b></td><td>A</td><td class="n">❌</td><td class="s">✅</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td>❌</td><td>550 mAh</td><td class="n">❌ precisa do Core</td></tr>
+      <tr><td><b>Placa 1,54"</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td>1,54"</td><td>depende</td><td class="s">✅</td></tr>
+      <tr><td><b>Waveshare AMOLED 2,16"</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td>ligar alto-falante</td><td>2,16" AMOLED</td><td>1000 mAh</td><td>gravar programa</td></tr>
+      <tr><td><b>ESP32-S3-BOX-3</b></td><td>B</td><td class="n">❌</td><td class="n">❌</td><td class="n">❌</td><td class="s">✅</td><td class="s">✅</td><td>2,4"</td><td>❌</td><td class="s">✅</td></tr>
+      <tr><td><b>PiCar-X</b></td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>❌</td><td>2 × 18650</td><td>+ Raspberry Pi</td></tr>
+      <tr><td><b>miniAuto Pro</b> (Standard/Ultimate)</td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>2,0"</td><td>2000 mAh</td><td class="s">✅</td></tr>
+      <tr><td><b>TurboPi + Pi 5</b></td><td>C</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td class="s">✅</td><td>❌</td><td>inclusa</td><td class="s">✅</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="tbl"><table>
+    <caption>2. IA, Wi-Fi e cérebro</caption>
+    <thead><tr><th>Kit</th><th>Cérebro</th><th>Wi-Fi</th><th>IA</th><th>Dá para usar DeepSeek?</th></tr></thead>
+    <tbody>
+      <tr><td><b>StackChan kit / Core</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi de fábrica</td><td>Pelo servidor XiaoZhi; com servidor próprio, não confirmado</td></tr>
+      <tr><td><b>Placa 1,54"</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi</td><td>Sim, pelo painel do XiaoZhi</td></tr>
+      <tr><td><b>Waveshare AMOLED 2,16"</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi (gravar)</td><td>Sim, pelo XiaoZhi</td></tr>
+      <tr><td><b>ESP32-S3-BOX-3</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi ou Home Assistant</td><td>Sim, pelo XiaoZhi</td></tr>
+      <tr><td><b>PiCar-X</b></td><td>Raspberry Pi 4/5</td><td>2,4 e 5 GHz</td><td>Código da fabricante: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao, Ollama</td><td>Sim, trocando uma linha do exemplo (a sua chave)</td></tr>
+      <tr><td><b>miniAuto Pro</b></td><td>ESP32 + módulo WonderLLM (ESP32-P4 + C5)</td><td>2,4 e 5 GHz</td><td>Voz e visão no módulo + modelo online configurado</td><td>Modelo online "com configuração"; DeepSeek não confirmado</td></tr>
+      <tr><td><b>TurboPi + Pi 5</b></td><td>Raspberry Pi 5 (8 GB)</td><td>2,4 e 5 GHz</td><td>ChatGPT (voz e visão)</td><td>Não de fábrica; Raspberry Pi permite trocar no código</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 style="font-size:1.2rem;margin:10px 0 6px">3. Preço aproximado em dólar</h3>
+  <div class="leg"><span><i style="background:var(--amb)"></i>parado (grupos A e B)</span><span><i style="background:#38bdf8"></i>com rodas (grupo C)</span></div>
+  <div class="bars">
+    <div class="bar"><span>Placa 1,54"</span><div class="t"><i style="width:4.1%"></i></div><span class="v">19</span></div>
+    <div class="bar"><span>Waveshare AMOLED 2,16"</span><div class="t"><i style="width:8.7%"></i></div><span class="v">40</span></div>
+    <div class="bar"><span>StackChan Core</span><div class="t"><i style="width:10%"></i></div><span class="v">46</span></div>
+    <div class="bar"><span>ESP32-S3-BOX-3</span><div class="t"><i style="width:10.9%"></i></div><span class="v">45–60</span></div>
+    <div class="bar"><span>StackChan Body</span><div class="t"><i style="width:12.2%"></i></div><span class="v">56</span></div>
+    <div class="bar"><span>PiCar-X (sem o Pi)</span><div class="t"><i class="rodas" style="width:19.6%"></i></div><span class="v">90</span></div>
+    <div class="bar"><span>StackChan kit</span><div class="t"><i style="width:21.5%"></i></div><span class="v">99</span></div>
+    <div class="bar"><span>miniAuto Pro</span><div class="t"><i class="rodas" style="width:35.7%"></i></div><span class="v">164+</span></div>
+    <div class="bar"><span>TurboPi + Pi 5</span><div class="t"><i class="rodas" style="width:100%"></i></div><span class="v">460</span></div>
+  </div>
+  <p class="mut" style="font-size:.85rem;margin-top:12px">Preços de 14/11/2026. Os em R$ vêm dos anúncios do AliExpress e foram convertidos pelo câmbio que o próprio AliExpress mostrava (R$ 6,12 por dólar). Não inclui frete nem impostos.</p>
+</div></section>
+
+<section id="escolha"><div class="wrap">
+  <span class="chip">Qual comprar</span>
+  <h2>Depende do que você quer que ele <span class="amb">faça</span></h2>
+  <p class="sub">Se o objetivo é um robô que interage com as pessoas, anda e conversa com DeepSeek, o primeiro cartão é o seu.</p>
+  <div class="esc">
+    <div class="card"><b>🚗 Andar, ver, ouvir e falar com DeepSeek, gastando menos</b><p>PiCar-X (US$ 89,99) + Raspberry Pi 5 de 4 GB + cartão microSD de 32 GB + 2 baterias 18650. Dá para rodar a IA no seu computador (Ollama) e funcionar sem internet externa.</p></div>
+    <div class="card"><b>📦 Tudo pronto, com rodas e o computador incluso</b><p>TurboPi Advanced + Raspberry Pi 5 (US$ 459,99). Chega completo; trocar a IA para DeepSeek exige mexer no código.</p></div>
+    <div class="card"><b>🧩 Simples, com tudo num módulo</b><p>miniAuto Pro Standard (a versão Starter não serve: não tem câmera nem microfone). Confirme o preço da versão antes.</p></div>
+    <div class="card"><b>🙂 Um bichinho de mesa com carinha</b><p>StackChan kit completo (cerca de US$ 99). Não compre Core + Body separados sem comparar o preço.</p></div>
+    <div class="card"><b>🧪 Só testar a conversa em português</b><p>Placa de 1,54" (R$ 118). Se ficar boa, você já sabe o que esperar antes de gastar com o robô.</p></div>
+  </div>
+</div></section>
+
+<section id="cuidados"><div class="wrap">
+  <span class="chip">Cuidados</span>
+  <h2>Antes de comprar</h2>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>🌏 Servidor na China</h3><p>Os kits com XiaoZhi (StackChan e placas "DeepSeek") usam por padrão um servidor público chinês: a sua voz passa por lá. Um fabricante avisa que o reconhecimento pela câmera desse servidor não funciona fora da China. Para ter controle, monte um servidor próprio ou prefira o grupo C com Raspberry Pi.</p></div>
+    <div class="card"><h3>👧 Perto de criança</h3><p>Robô com câmera e microfone dentro de casa merece cuidado. Veja o guia irmão <a href="https://inematds.github.io/robo-ia-crianca/guia/" target="_blank" rel="noopener">Robô de IA para criança</a>, com checklist antes de comprar.</p></div>
+    <div class="card"><h3>🏷️ Versão certa no anúncio</h3><p>Muitos anúncios têm várias versões com o mesmo título. Confira se a que você escolheu traz câmera, microfone e alto-falante (no miniAuto, a Starter não traz; na PiCar-X, procure "AI").</p></div>
+    <div class="card"><h3>💸 Preço final no Brasil</h3><p>Os valores aqui não têm frete nem imposto de importação. Baterias 18650 às vezes não vêm por avião: compre aqui.</p></div>
+  </div>
+  <div class="aviso">Esta página é pesquisa feita em 14/11/2026 a partir das fichas dos fabricantes e dos anúncios. Nenhum kit foi comprado nem testado. Quando houver teste real, ele entra aqui.</div>
+</div></section>
+
+<div id="tecnico" class="techhead"><div class="wrap">
+  <span class="chip">Parte técnica</span>
+  <h2>O kit: <span class="amb">para quem quer filtrar e configurar</span></h2>
+  <p class="sub">Daqui para baixo é a parte técnica: um programa que filtra os kits pelo que você precisa e o caminho para fazer a PiCar-X conversar com a DeepSeek em português. Você <strong>não precisa</strong> desta parte para entender o que está acima.</p>
+</div></div>
+
+<div class="techzone">
+<section id="oque"><div class="wrap">
+  <span class="chip">O que é</span>
+  <h2>Os dados da pesquisa e um filtro</h2>
+  <p class="sub">O repositório guarda tudo o que está nesta página em arquivos que você pode reaproveitar.</p>
+  <div class="grid g3">
+    <div class="card"><h3>📋 FATOS.md</h3><p>Cada número da página com a fonte e a data. É a fonte única do guia e do vídeo.</p></div>
+    <div class="card"><h3>🗂️ dados/produtos.json</h3><p>Os 9 kits com preço em dólar, o que têm (rodas, câmera, microfone, voz, tela, bateria, Wi-Fi), a IA e o link.</p></div>
+    <div class="card"><h3>🔎 escolher.py</h3><p>Pergunta o que você precisa (rodas? câmera? pronto? orçamento?) e mostra só os kits que atendem, do mais barato ao mais caro. 8 testes.</p></div>
+  </div>
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">Guia de uso · passo a passo</span>
+  <h2>Filtrar os kits e preparar a conversa</h2>
+  <p class="sub">Só precisa de Python 3 (já vem no Linux e no Mac; no Windows, instale pelo python.org).</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Baixar o kit</h3>
+    <p>Copia o repositório para o seu computador.</p>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/robo-que-conversa.git</span>
+<span class="k">cd</span> robo-que-conversa</pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Responder às perguntas</h3>
+    <p>Sem opções, o programa pergunta no terminal. Com opções, responde direto.</p>
+<pre><span class="k">python3 escolher.py</span>                             <span class="c"># pergunta: rodas? câmera? pronto? orçamento?</span>
+<span class="k">python3 escolher.py --rodas --camera --ate 200</span>  <span class="c"># PiCar-X e miniAuto Pro</span>
+<span class="k">python3 escolher.py --tabela</span>                    <span class="c"># todos, do mais barato ao mais caro</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Conferir os testes</h3>
+    <p>Garante que o filtro continua certo se você mudar os dados.</p>
+<pre><span class="k">python3 -m unittest test_escolher</span>   <span class="c"># Ran 8 tests ... OK</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>PiCar-X conversando com a DeepSeek (roteiro, ainda não testado)</h3>
+    <p>Segue a documentação da SunFounder (aulas 18 e 21). Depois de montar o carrinho e instalar os módulos da fabricante no Raspberry Pi, crie a chave na plataforma da DeepSeek e salve no arquivo de segredos.</p>
+<pre><span class="k">cd</span> ~/picar-x/example
+<span class="k">sudo nano</span> secret.py          <span class="c"># escreva: DEEPSEEK_API_KEY = "sk-..."</span></pre>
+    <p>No exemplo do assistente de voz (<code>21.voice_active_car_gpt.py</code>), troque a IA e o idioma. Os nomes vêm da documentação da SunFounder; o modelo de voz em português do Piper você escolhe na lista de vozes do Piper.</p>
+<pre><span class="k">from</span> picarx.llm <span class="k">import</span> Deepseek <span class="k">as</span> LLM
+llm = LLM(api_key=DEEPSEEK_API_KEY, model=<span class="s">"deepseek-chat"</span>)
+STT_LANGUAGE = <span class="s">"pt"</span>            <span class="c"># Vosk tem modelo em português</span>
+TTS_MODEL = <span class="s">"&lt;voz pt_BR do Piper&gt;"</span>
+WAKE_WORD = [<span class="s">"oi robô"</span>]        <span class="c"># palavra para acordar</span></pre>
+<pre><span class="k">sudo python3</span> 21.voice_active_car_gpt.py</pre>
+  </div></div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <span class="chip">Roadmap</span>
+  <h2>Próximos passos</h2>
+  <div class="grid g3" style="margin-top:18px">
+    <div class="card"><h3>1 · Comprar e testar</h3><p>Testar a conversa em português numa placa barata e depois no carrinho, medindo o tempo de resposta.</p></div>
+    <div class="card"><h3>2 · Servidor próprio</h3><p>IA rodando num computador da casa, sem mandar a voz para fora.</p></div>
+    <div class="card"><h3>3 · Interação de verdade</h3><p>O robô percebe alguém pela câmera, vira para a pessoa e puxa conversa.</p></div>
+  </div>
+</div></section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">ESP32-S3</div><div class="pill">Raspberry Pi</div><div class="pill">DeepSeek</div><div class="pill">XiaoZhi</div>
+    <p style="margin-top:18px">robo-que-conversa · pesquisa de 14/11/2026 ·
+      <a href="https://github.com/inematds/robo-que-conversa">inematds/robo-que-conversa</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='robo-que-conversa-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
