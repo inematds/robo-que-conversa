@@ -199,7 +199,7 @@
 <section id="caminho"><div class="wrap">
   <span class="chip">Como a conversa funciona</span>
   <h2>A IA <span class="amb">não mora</span> dentro do robô</h2>
-  <p class="sub">Todos os kits deste guia funcionam do mesmo jeito: o robô ouve e fala, mas quem pensa é um computador na internet. Por isso todos precisam de Wi-Fi.</p>
+  <p class="sub">Quase todos os kits deste guia funcionam do mesmo jeito: o robô ouve e fala, mas quem pensa é um computador na internet. Por isso todos têm Wi-Fi. Exceções: o módulo do miniAuto Pro entende alguns comandos de voz e imagem sozinho, e a PiCar-X pode usar uma IA no seu computador.</p>
   <div class="flow">
     <span>🗣️ Pessoa fala</span><span class="arr">→</span>
     <span>🎙️ Microfone do robô</span><span class="arr">→</span>
@@ -223,7 +223,10 @@
       <li><b>Palavra de ativação</b>: a frase que acorda o robô para ouvir ("oi robô").</li>
       <li><b>18650</b>: pilha recarregável grande (tipo a de lanterna potente). <b>mAh</b>: quanto a bateria guarda; mais é mais tempo ligado.</li>
       <li><b>MP</b>: megapixels, a resolução da câmera. <b>AMOLED</b>: tipo de tela com cores fortes e preto de verdade. <b>microSD</b>: cartão de memória.</li>
-      <li><b>Terminal</b>: a janela onde se digitam comandos. <b>Repositório</b>: a pasta do projeto guardada no GitHub.</li>
+      <li><b>Terminal</b>: a janela onde se digitam comandos. <b>Repositório</b>: a pasta do projeto guardada no GitHub. <b>Git</b>: programa que baixa o repositório. <b>Python</b>: a linguagem do programa do kit.</li>
+      <li><b>sudo</b>: roda o comando como administrador. <b>nano</b>: editor de texto do terminal.</li>
+      <li><b>Vosk</b>: transforma a sua voz em texto. <b>Piper</b>: transforma o texto em voz. Os dois rodam no próprio Raspberry Pi.</li>
+      <li><b>LiDAR</b> e <b>câmera 3D</b>: sensores que medem a distância de tudo em volta para o robô montar um mapa da sala.</li>
     </ul>
   </details>
 </div></section>
@@ -332,9 +335,9 @@
       <article class="prod">
         <div class="ph"><img src="assets/produtos/picarx.jpg" alt="SunFounder PiCar-X, carrinho com câmera" loading="lazy"></div>
         <div class="bd">
-          <span class="badge gr">Melhor custo</span>
+          <span class="badge gr">Mais aberto</span>
           <h4>SunFounder PiCar-X (versão AI)</h4>
-          <div class="preco">US$ 89,99 + Raspberry Pi</div>
+          <div class="preco">US$ 89,99 + Raspberry Pi, cartão e pilhas</div>
           <p>Carrinho para Raspberry Pi (o computadorzinho, vendido à parte). A fabricante traz aulas prontas de conversa por voz com IA e o código aceita DeepSeek.</p>
           <ul><li>Câmera que gira e inclina</li><li>Sensor de distância (ultrassom) e de linha</li><li>Raspberry Pi 5, 4, 3B+ ou Zero 2W (o Zero 2W só tem Wi-Fi 2,4 GHz)</li><li>Microfone e alto-falante usados nas aulas de voz</li><li>IA: OpenAI, Gemini, Grok, DeepSeek, Qwen, Doubao e Ollama (IA no seu computador)</li></ul>
           <p class="bom">👍 Programável em Python, roda IA local, voz em português possível.</p>
@@ -398,7 +401,7 @@
     <caption>2. IA, Wi-Fi e cérebro</caption>
     <thead><tr><th>Kit</th><th>Cérebro</th><th>Wi-Fi</th><th>IA</th><th>Dá para usar DeepSeek?</th></tr></thead>
     <tbody>
-      <tr><td><b>StackChan kit / Core</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi de fábrica</td><td>Os anúncios de XiaoZhi citam DeepSeek; não confirmado neste kit</td></tr>
+      <tr><td><b>StackChan kit / Core</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi de fábrica</td><td>Segundo os anúncios de XiaoZhi, sim (não testado neste kit)</td></tr>
       <tr><td><b>Placa 1,54"</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi</td><td>Segundo os anúncios, sim (não testado)</td></tr>
       <tr><td><b>Waveshare AMOLED 2,16"</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi (gravar)</td><td>Segundo os anúncios de XiaoZhi, sim (não testado)</td></tr>
       <tr><td><b>ESP32-S3-BOX-3</b></td><td>ESP32-S3</td><td>2,4 GHz</td><td>XiaoZhi ou Home Assistant</td><td>Segundo os anúncios de XiaoZhi, sim (não testado)</td></tr>
@@ -416,7 +419,7 @@
     <div class="bar"><span>StackChan Core</span><div class="t"><i style="width:10%"></i></div><span class="v">46</span></div>
     <div class="bar"><span>ESP32-S3-BOX-3</span><div class="t"><i style="width:10.9%"></i></div><span class="v">45–60</span></div>
     <div class="bar"><span>StackChan Body</span><div class="t"><i style="width:12.2%"></i></div><span class="v">56</span></div>
-    <div class="bar"><span>PiCar-X (sem o Pi)</span><div class="t"><i class="rodas" style="width:19.6%"></i></div><span class="v">90</span></div>
+    <div class="bar"><span>PiCar-X (só o carrinho)</span><div class="t"><i class="rodas" style="width:19.6%"></i></div><span class="v">90</span></div>
     <div class="bar"><span>StackChan kit</span><div class="t"><i style="width:21.5%"></i></div><span class="v">99</span></div>
     <div class="bar"><span>miniAuto Pro</span><div class="t"><i class="rodas" style="width:35.7%"></i></div><span class="v">164+</span></div>
     <div class="bar"><span>TurboPi + Pi 5</span><div class="t"><i class="rodas" style="width:100%"></i></div><span class="v">460</span></div>
@@ -429,7 +432,7 @@
   <h2>Depende do que você quer que ele <span class="amb">faça</span></h2>
   <p class="sub">Se o objetivo é um robô que interage com as pessoas, anda e conversa com DeepSeek, o primeiro cartão é o seu.</p>
   <div class="esc">
-    <div class="card"><b>🚗 Andar, ver, ouvir e falar com DeepSeek, gastando menos</b><p>PiCar-X (US$ 89,99) + Raspberry Pi 5 de 4 GB + cartão microSD de 32 GB + 2 baterias 18650. Dá para rodar a IA no seu computador (Ollama) e funcionar sem internet externa.</p></div>
+    <div class="card"><b>🚗 Andar, ver, ouvir e falar com DeepSeek, com mais liberdade</b><p>PiCar-X (US$ 89,99) + Raspberry Pi 5 de 4 GB + cartão microSD de 32 GB + 2 pilhas 18650. Some o preço dessas peças na sua loja antes de comparar com o miniAuto Pro, que vem completo. São dois caminhos para a IA: a DeepSeek, pela internet com a sua chave, ou uma IA rodando no seu computador (Ollama), que funciona sem internet externa.</p></div>
     <div class="card"><b>📦 Tudo pronto, com rodas e o computador incluso</b><p>TurboPi Advanced + Raspberry Pi 5 (US$ 459,99). Chega completo; trocar a IA para DeepSeek exige mexer no código.</p></div>
     <div class="card"><b>🧩 Simples, com tudo num módulo</b><p>miniAuto Pro Standard (a versão Starter não serve: não tem câmera nem microfone). Confirme o preço da versão antes.</p></div>
     <div class="card"><b>🙂 Um bichinho de mesa com carinha</b><p>StackChan kit completo (cerca de US$ 99). Não compre Core + Body separados sem comparar o preço.</p></div>
@@ -470,7 +473,7 @@
 <section id="guia"><div class="wrap">
   <span class="chip">Guia de uso · passo a passo</span>
   <h2>Filtrar os kits e preparar a conversa</h2>
-  <p class="sub">Precisa de Python 3 (já vem no Linux e no Mac; no Windows, instale pelo python.org). Os comandos vão no terminal (no Windows, o "Prompt de Comando" ou o PowerShell).</p>
+  <p class="sub">Precisa de Python 3 (já vem no Linux e no Mac; no Windows, instale pelo python.org). Os comandos vão no terminal (no Windows, o "Prompt de Comando" ou o PowerShell, e lá troque <code>python3</code> por <code>py</code>).</p>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Baixar o kit</h3>
@@ -482,7 +485,7 @@
   <div class="step"><div class="b">2</div><div>
     <h3>Responder às perguntas</h3>
     <p>Sem opções, o programa pergunta no terminal. Com opções, responde direto.</p>
-<pre><span class="k">python3 escolher.py</span>                             <span class="c"># pergunta: rodas? câmera? pronto? orçamento?</span>
+<pre><span class="k">python3 escolher.py</span>                             <span class="c"># pergunta: rodas? câmera? se mexe? pronto? orçamento?</span>
 <span class="k">python3 escolher.py --rodas --camera --ate 200</span>  <span class="c"># PiCar-X e miniAuto Pro</span>
 <span class="k">python3 escolher.py --tabela</span>                    <span class="c"># todos, do mais barato ao mais caro</span></pre>
   </div></div>
@@ -497,9 +500,10 @@
     <h3>PiCar-X conversando com a DeepSeek (roteiro, ainda não testado)</h3>
     <p>Segue a documentação da SunFounder (aulas 18 e 21). Antes: monte o carrinho e <a href="https://docs.sunfounder.com/projects/picar-x-v20/en/latest/python/install_all_modules.html" target="_blank" rel="noopener">instale os módulos da fabricante</a> no Raspberry Pi (página em inglês). Depois crie a chave em <a href="https://platform.deepseek.com/" target="_blank" rel="noopener">platform.deepseek.com</a> (menu API Keys, com crédito na conta) e salve no arquivo de segredos.</p>
 <pre><span class="k">cd</span> ~/picar-x/example
-<span class="k">sudo nano</span> secret.py          <span class="c"># escreva: DEEPSEEK_API_KEY = "sk-..."</span></pre>
+<span class="k">sudo nano</span> secret.py          <span class="c"># escreva: DEEPSEEK_API_KEY = "sk-..." e salve com Ctrl+O, Enter, Ctrl+X</span></pre>
     <p>No exemplo do assistente de voz (<code>21.voice_active_car_gpt.py</code>), troque a IA e o idioma. Os nomes vêm da documentação da SunFounder. A voz em português do Piper você escolhe na <a href="https://huggingface.co/rhasspy/piper-voices/tree/main/pt/pt_BR" target="_blank" rel="noopener">lista de vozes pt_BR do Piper</a> e escreve o nome dela no lugar do marcador.</p>
-<pre><span class="k">from</span> picarx.llm <span class="k">import</span> Deepseek <span class="k">as</span> LLM
+<pre><span class="k">from</span> secret <span class="k">import</span> DEEPSEEK_API_KEY
+<span class="k">from</span> picarx.llm <span class="k">import</span> Deepseek <span class="k">as</span> LLM
 llm = LLM(api_key=DEEPSEEK_API_KEY, model=<span class="s">"deepseek-chat"</span>)
 STT_LANGUAGE = <span class="s">"pt"</span>            <span class="c"># Vosk tem modelo em português</span>
 TTS_MODEL = <span class="s">"&lt;voz pt_BR do Piper&gt;"</span>
